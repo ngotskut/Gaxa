@@ -13,16 +13,16 @@ import telebot
 from telebot import types
 
 # ================ CONFIGURATION ================
-BOT_TOKEN = "8756794417:AAHzwO8OgC2s902dHdWP1aM_mpqEPDVdORU"
+BOT_TOKEN = "8962462839:AAHm-ORlzyu1GOR3u1IsM7hrJfsws_7OcAs"
 ADMIN_ID = 1725468809
-GROUP_CHAT_ID = "-1003725931679"
+GROUP_CHAT_ID = "-1003986732668"
 PANEL_URL = "http://144.217.71.192/ints/login"
 DATA_URL = "http://144.217.71.192/ints/agent/res/data_smscdr.php"
 MONITOR_PAGE = "http://144.217.71.192/ints/agent/SMSCDRStats"
 
 MY_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-PANEL_USER = "atik9900"
-PANEL_PASS = "atik9900"
+PANEL_USER = "sontol"
+PANEL_PASS = "sontol"
 
 bot = telebot.TeleBot(BOT_TOKEN)
 session = requests.Session()
