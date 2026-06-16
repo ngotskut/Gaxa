@@ -154,7 +154,7 @@ def handle_login():
     except Exception as e:
         print(f"LOGIN ERROR: {e}")
         SESSION_STATUS = "❌ Auth Error"
-        bot.send_message(ADMIN_ID, f"❌ Login Error: <code>{str(e)[:50]}</code>")
+        bot.send_message(ADMIN_ID, f"❌ Login Error: <code>{str(e)[:500]}</code>")
     return False
 
 def handle_logout():
