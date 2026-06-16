@@ -1,3 +1,4 @@
+print("BOT STARTED")
 # Created By @Lohit_69
 import time
 import re
@@ -106,12 +107,30 @@ def handle_login():
     global SESSION_STATUS, BROWSER, CONTEXT, PAGE, PLAYWRIGHT_INST, session
     SESSION_STATUS = "🟡 Initializing..."
     update_active_hud()
+
+    print("LOGIN FUNCTION CALLED")
+    
     try:
+        print("PLAYWRIGHT START")
+        
         if not PLAYWRIGHT_INST:
             PLAYWRIGHT_INST = sync_playwright().start()
+            
+            print("PLAYWRIGHT STARTED")
+            
             BROWSER = PLAYWRIGHT_INST.chromium.launch(headless=True)
+
+            print("CHROMIUM LAUNCHED")
+            
             CONTEXT = BROWSER.new_context(user_agent=MY_USER_AGENT)
+
+            print("CONTEXT CREATED")
+            
             PAGE = CONTEXT.new_page()
+            
+            print("PAGE CREATED")
+
+    
 
         PAGE.goto(PANEL_URL, wait_until="networkidle", timeout=60000)
         if "login" in PAGE.url.lower():
@@ -133,6 +152,7 @@ def handle_login():
             bot.send_message(ADMIN_ID, "✅ Auth Success: Panel Synced.")
             return True
     except Exception as e:
+        print(f"LOGIN ERROR: {e}")
         SESSION_STATUS = "❌ Auth Error"
         bot.send_message(ADMIN_ID, f"❌ Login Error: <code>{str(e)[:50]}</code>")
     return False
@@ -366,5 +386,7 @@ def handle_query(call):
     update_active_hud()
 
 if __name__ == "__main__":
+    print("BOT STARTED")
+    
     threading.Thread(target=monitor, daemon=True).start()
     bot.infinity_polling()
