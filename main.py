@@ -21,8 +21,8 @@ DATA_URL = "http://144.217.71.192/ints/agent/res/data_smscdr.php"
 MONITOR_PAGE = "http://144.217.71.192/ints/agent/SMSCDRStats"
 
 MY_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-PANEL_USER = "sontol"
-PANEL_PASS = "sontol"
+PANEL_USER = "hanzgradian"
+PANEL_PASS = "Kodam123!"
 
 bot = telebot.TeleBot(BOT_TOKEN)
 session = requests.Session()
