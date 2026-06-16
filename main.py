@@ -14,7 +14,7 @@ from telebot import types
 
 # ================ CONFIGURATION ================
 BOT_TOKEN = "8962462839:AAHm-ORlzyu1GOR3u1IsM7hrJfsws_7OcAs"
-ADMIN_ID = 1725468809
+ADMIN_ID = 1047760474
 GROUP_CHAT_ID = "-1003986732668"
 PANEL_URL = "http://144.217.71.192/ints/login"
 DATA_URL = "http://144.217.71.192/ints/agent/res/data_smscdr.php"
